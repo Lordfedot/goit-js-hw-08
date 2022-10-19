@@ -19,6 +19,11 @@ function onFormSubmit(e) {
         email: refs.form.elements.email.value,
         message: refs.form.elements.message.value
     }
+    
+    if (dataInputs.email === '' || dataInputs.message === '') {
+        alert('Всі поля повинні бути заповнені')
+        return
+    }
     console.log(dataInputs);
 
     e.currentTarget.reset()
