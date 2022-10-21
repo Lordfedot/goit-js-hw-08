@@ -3,7 +3,7 @@ import throttle from "lodash.throttle";
 const refs = {
     form: document.querySelector('.feedback-form'),
 }
-const KEY_STORAGE = 'feedback-form-state'
+const KEY_STORAGE = 'feedback-form-state';
 
 let localStorageData = {}
 
@@ -29,8 +29,8 @@ function onFormSubmit(e) {
     e.currentTarget.reset()
 }
 function onInput(e) {
-   const email = e.target.value
-   const text = e.target.value
+   const email = refs.form.elements.email.value
+   const text = refs.form.elements.message.value
    localStorageData = {
     email,
     text
